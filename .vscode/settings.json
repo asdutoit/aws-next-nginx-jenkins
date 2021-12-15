@@ -1,0 +1,5 @@
+{
+  "workbench.colorTheme": "Cobalt2",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

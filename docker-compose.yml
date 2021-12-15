@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  nextjs1:
+    build: ./
+    # volumes:
+    #   - ./.next/cache:/usr/app/.next/cache/
+  nextjs2:
+    build: ./
+    # This will mount the local directory to the docker directory.  Any changes made in local will automatically be updated in the docker
+    # volumes:
+    #   - ./:/usr/app
+  nginx:
+    build: ./nginx
+    volumes:
+      - ./nginx/localhost.conf:/etc/nginx/localhost.conf
+    ports:
+      - 80:80
+      - 8088:8088
